@@ -36,4 +36,4 @@ if len(str_ret) > 3:
     str_ret = str_ret[:-3]
 print(f'No recursion used:{str_ret} = {sum_with_no_recursion}')
 
-print(f'Summ of 20 primes = {sum_primes(20)}')
+print(f'Sum of 20 primes = {sum_primes(20)}')
