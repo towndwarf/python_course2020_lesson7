@@ -47,7 +47,6 @@ def count_digits_in_list_row(row: []) -> int:
     return cnt - 1
 
 
-
 adj = 0
 if len(res) > 0:
     adj = count_digits_in_list_row(res[-1])
