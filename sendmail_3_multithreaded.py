@@ -78,14 +78,14 @@ def send_single_mail(msg_id):
 
     except smtplib.SMTPDataError as e:
         thread_pool_dict[msg_id] = thread_pool_dict[msg_id] - 1
-        print(f"Problem with {msg_id} thread")
-        print(e)
+        print(f"Problem with {msg_id} thread, {e}")
         if thread_pool_dict[msg_id] > -4:
-            time.sleep(random.randint(20, 60))
+            time.sleep(random.randint(1, 60))
             send_single_mail(msg_id)
             print(f"Fed up with {msg_id} thread, quitting")
-    except:
-        print(f"General exception from {msg_id} thread, quitting")
+
+    except Exception as e:
+        print(f"General exception from {msg_id} thread, {e}, quitting")
 
     return None
 

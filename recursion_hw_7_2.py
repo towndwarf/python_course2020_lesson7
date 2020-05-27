@@ -20,11 +20,12 @@ def sum_primes(n: int) -> int:
         return 0
     else:
         # print(f'DBG: stack = {n}')
+        sm = sum_primes(n - 1)
         if is_prime(n):
             print(f'PRIME:{n}')
-            return n + sum_primes(n - 1)
+            return n + sm
         else:
-            return sum_primes(n - 1)
+            return sm
 
 
 sum_with_no_recursion = 0

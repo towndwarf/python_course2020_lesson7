@@ -9,17 +9,19 @@ f.write('Hi there!\n')  # python will convert \n to os.linesep
 f.close()  # you can omit in most cases as the destructor will call it
 #############
 
+# f.read(...) <= [buffer] <= file
+
 #############
 # SIMPLE FILE WRITE - LINE BY LINE
 
-# file = open(completefilepath,'r',encoding='utf8',errors=None | "ignore")
+# file = open (completefilepath,'r',encoding='utf8',errors=None | "ignore")
 with open(file=hw_7_4_data.filename, mode="w", encoding="ascii") as file_handle:
     line = ','.join(hw_7_4_data.col_names) + '\n'
     file_handle.writelines(line)
     for line_arr in hw_7_4_data.people_en:
         line = ','.join(line_arr)  # converting an array to CSV line
         file_handle.writelines(line + '\n')
-    file_handle.close()
+
 
 #############
 # SIMPLE FILE WRITE - write all lines in 1 batch
