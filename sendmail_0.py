@@ -1,5 +1,7 @@
 import smtplib
 import csv
+import time
+
 
 filename = 'filename_en.csv'
 
@@ -55,6 +57,7 @@ with open(filename, newline='\n') as csv_file:
             server.sendmail(sender, receiver, message)
             # time.sleep(20) # sleep for 20 sec
             print('sent as ASCII')
+            time.sleep(6)
     server.close()
     csv_file.close()
 
