@@ -2,14 +2,11 @@ import hw_7_4_data
 import pandas as pd
 import pathlib
 
-
 file = pd.DataFrame(hw_7_4_data.people, columns=hw_7_4_data.col_names)
 file.to_csv(hw_7_4_data.filename_utf8, encoding="utf-8")
 
-
 print('End of the csv file creation')
 print(f'At {pathlib.Path(__file__).parent.absolute()}\\{hw_7_4_data.filename_utf8}.')
-
 
 # read with Panda
 print(' --- file read with Panda module --- ')

@@ -17,3 +17,4 @@ with open(hw_7_4_data.filename, "rt", encoding='utf-8') as infile:
         print(f'{row}')
 
 
+

@@ -32,7 +32,7 @@ for idx, val in enumerate(L):
 # #############################
 # COUNT DIGITS IN A NUMBER
 def digits_count(n: int) -> int:
-    count = 0
+    count:int = 0
     while n > 0:
         count = count + 1
         n = n // 10
